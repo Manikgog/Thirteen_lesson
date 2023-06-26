@@ -7,7 +7,7 @@
 
 int main()
 {
-    Calculator c1(2.1f, 3.0f, '*'); std::cout << std::endl;
+    /*Calculator c1(2.1f, 3.0f, '*'); std::cout << std::endl;
     Calculator c2(2.1, 3.0, '*');   std::cout << std::endl;
     Calculator c3(2, 3, '*');       std::cout << std::endl;
 
@@ -23,5 +23,7 @@ int main()
     Calculator c11(2.1, 3.0, '/');  std::cout << std::endl;
     Calculator c12(2, 3, '/');      std::cout << std::endl;
 
-    Calculator c13(5, 200, '%'); std::cout << std::endl;
+    Calculator c13(5, 200, '%'); std::cout << std::endl;*/
+
+    Calculator::Calculator(1, 2, '+');
 }

@@ -3,7 +3,7 @@
 
 #include <iostream>
 
-class Calculator
+static class Calculator
 {
 private:
 	double _num1;
