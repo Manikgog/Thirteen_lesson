@@ -1,72 +1,28 @@
-#ifndef _CALCULATOR_H_
+﻿#ifndef _CALCULATOR_H_
 #define _CALCULATOR_H_
 
 #include <iostream>
 
-static class Calculator
+extern int _num1_int;
+extern int _num2_int;
+extern float _num1_float;
+extern float _num2_float;
+extern double _num1_double;
+extern double _num2_double;
+extern char _c;
+
+
+class Calculator
 {
-private:
-	double _num1;
-	double _num2;
-	char _c;
-
+	// Для обеспечения требования - не хранить данные внутри класса, полей в классе нет.
+	// Соответственно не нужны конструкторы и деструкторы.
 public:
-	Calculator(double num1, double num2, char c)
-		: _num1(num1), _num2(num2), _c(c) 
-	{
-		Action(_num1, _num2, _c);
-	}
+		
+	static int Action(int num1, int num2, char c);
 
-	Calculator(float num1, float num2, char c)
-		: _num1(num1), _num2(num2), _c(c)
-	{
-		Action(_num1, _num2, _c);
-	}
+	static double Action(double num1, double num2, char c);
 
-	Calculator(int num1, int num2, char c)
-		: _num1(num1), _num2(num2), _c(c)
-	{
-		Action(_num1, _num2, _c);
-	}
-
-	Calculator(char num1, char num2, char c)
-		: _num1(num1), _num2(num2), _c(c)
-	{
-		Action(_num1, _num2, _c);
-	}
-
-	Calculator(unsigned char num1, unsigned char num2, char c)
-		: _num1(num1), _num2(num2), _c(c)
-	{
-		Action(_num1, _num2, _c);
-	}
-	
-	Calculator(unsigned int num1, unsigned int num2, char c)
-		: _num1(num1), _num2(num2), _c(c)
-	{
-		Action(_num1, _num2, _c);
-	}
-
-	template <typename T>
-	T Action(T num1, T num2, char c)
-	{
-		if (_c == '+')
-			std::cout << _num1 + _num2;
-		else if (_c == '-')
-			std::cout << _num1 - _num2;
-		else if (_c == '*')
-			std::cout << _num1 * _num2;
-		else if (_c == '/')
-		{
-			if (num2 == 0)
-				exit(1);
-			std::cout << _num1 / _num2;
-		}
-		else if (_c == '%')
-		{
-			std::cout << (num2 / 100) * num1;
-		}
-	}
+	static float Action(float num1, float num2, char c);
 
 };
 

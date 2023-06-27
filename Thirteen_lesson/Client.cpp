@@ -1,4 +1,4 @@
 #include "Client.h"
 
-int Client::count = 0;
+int Client::_countOfClients = 0;
 
