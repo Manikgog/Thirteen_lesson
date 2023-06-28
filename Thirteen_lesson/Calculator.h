@@ -3,14 +3,6 @@
 
 #include <iostream>
 
-extern int _num1_int;
-extern int _num2_int;
-extern float _num1_float;
-extern float _num2_float;
-extern double _num1_double;
-extern double _num2_double;
-extern char _c;
-
 
 class Calculator
 {
